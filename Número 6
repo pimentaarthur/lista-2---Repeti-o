@@ -1,0 +1,23 @@
+using System;
+
+    namespace num6{
+
+        class num6{
+
+
+            static void Main(String [] args){
+                
+                double n, e = 0, S =0;
+
+                Console.WriteLine("informe um número:");
+                n = double.Parse(Console.ReadLine());
+
+                while(e!=n){
+                    e++;
+                    S = 1/e +S;
+                }
+                Console.WriteLine(S);
+                                   
+                }
+            }
+        }
