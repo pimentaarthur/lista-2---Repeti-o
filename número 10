@@ -1,0 +1,43 @@
+using System;
+
+    namespace num1{
+
+        class num1{
+
+
+            static void Main(String [] args){
+
+             int candidato1 = 0, candidato2  = 0, candidato3  = 0, candidato4  = 0, nulo  = 0, branco  = 0, a = 8;
+
+             
+
+                while(a!=0){
+
+                     Console.WriteLine(" 0 = encerrar o programa \n 1 = voto candidato 1 \n 2 = voto candidato 2\n 3 = voto candidato 3\n 4 = voto candidato 4\n 5 = voto nulo\n 6 = voto em branco");
+                a = int.Parse(Console.ReadLine());
+
+                    switch(a){
+                        case 1 : candidato1 = candidato1 +1;
+                        break;
+                        case 2: candidato2 = candidato2 +1;
+                        break;
+                        case 3 : candidato3 = candidato3 +1;
+                        break;
+                        case 4 : candidato4 = candidato4 +1;
+                        break;
+                        case 5 : nulo = nulo +1;
+                        break;
+                        case 6 : branco = branco +1;
+                        break;
+                        default : Console.WriteLine("codigo invalido");
+                        break;
+                    }
+                }
+                 Console.WriteLine("votos totais candidato 1 = "+candidato1+"\nvotos totais candidato 2 = "+candidato2+"\nvotos totais candidato 3 = "+candidato3+"\nvotos totais candidato 4 = "+candidato4+"\nvotos totais nulos = "+nulo+"\nvotos totais brancos= "+branco);
+                
+
+                       
+                }
+            }
+        }
+    
