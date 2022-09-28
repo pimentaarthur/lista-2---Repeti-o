@@ -1,0 +1,54 @@
+using System;
+
+    namespace num2{
+
+        class num2{
+
+
+            static void Main(String [] args){
+
+             string a = "S" ;
+             int positivo = 0 ,negativo = 0 , zero = 0, numero, totais=0; 
+             double porcpositivo , porcnegativo , porczer;
+                        
+
+                while(a =="S"){
+
+                    
+                
+                    Console.WriteLine("informe o número");
+                    numero = int.Parse(Console.ReadLine());
+
+                    totais = totais+1;
+
+                    if(numero>0){
+                        positivo = positivo+1;
+                    }
+                    else if(numero<0)
+                    {
+                        negativo = negativo+1;
+                    }
+                    else if(numero==0){
+                        zero = zero+1;
+                    }
+
+
+
+                     Console.WriteLine("deseja informar outro número? aperte 'S' para continuar e qualquer outra tecla para encerrar o programa. ");
+                      a = Console.ReadLine();
+                      
+                    }
+                    porcpositivo = (positivo*100)/totais;
+
+                    porcnegativo = (negativo*100)/totais;
+
+                    porczer = (zero*100)/totais;
+
+                    Console.WriteLine(" positivos = "+positivo+"\n negativos = "+negativo+"\n zeros = "+zero+"\n números totais = "+totais+"\n porcentagem positivos = "+porcpositivo+" %"+"\n porcentagem negativos = "+porcnegativo+" %"+"\n porcentagem zero = "+porczer+" %");
+                }
+                 
+                       
+                }
+            }
+        
+    
