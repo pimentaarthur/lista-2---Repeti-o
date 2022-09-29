@@ -1,0 +1,55 @@
+using System;
+
+    namespace num1{
+
+        class num1{
+
+            static void Main(String[] args){
+
+                double salario, maiorsalario = 0 ,salario100 = 0, salariostotal = 0,mediasalario = 0, filhostotal = 0,mediafilhos=0, pessoas =0;
+                int filhos;
+
+                Console.WriteLine("informe o salário");
+                salario = double.Parse(Console.ReadLine());
+
+                while(salario>=0){
+
+
+                    salariostotal = salariostotal +salario;
+
+                    pessoas++;
+
+                    Console.WriteLine("informe o número de filhos");
+                    filhos = int.Parse(Console.ReadLine());
+
+                    filhostotal = filhostotal + filhos;
+
+                    mediafilhos = filhostotal/pessoas;
+
+                    mediasalario = salariostotal/pessoas;
+
+                    if(salario>maiorsalario){
+                        maiorsalario = salario;
+                    }
+
+                    if(salario<=100){
+                        salario100++;
+                    }
+                    salario100 = (salario100*100)/pessoas;
+
+
+                    Console.WriteLine("informe o salário. caso queira encerrar informe um número negativo");
+                    salario = double.Parse(Console.ReadLine());
+
+
+                }
+
+                Console.WriteLine("média do salário da população = "+mediasalario+"\nmédia do número de filhos = "+mediafilhos+"\nmaior salário = "+maiorsalario+"\npercentual de pessoas com salário até R$100,00 = "+salario100+" %");
+
+
+                
+
+
+            }
+        }
+    }
