@@ -1,0 +1,26 @@
+using System;
+
+    namespace num1{
+
+        class num1{
+
+            static void Main(String[] args){
+
+               int n;
+               float soma = 0;
+               
+
+               Console.WriteLine("informe o valor de N");
+               n = int.Parse(Console.ReadLine());
+
+               for(int s=1;s<n;s++){
+
+                soma = 1/s;
+                Console.WriteLine("1/"+s);
+                
+               }
+               Console.WriteLine("soma = "+soma);
+
+            }
+        }
+    }
