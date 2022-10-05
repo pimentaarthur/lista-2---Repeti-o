@@ -1,0 +1,53 @@
+using System;
+
+class Program
+{
+    public static void Main(string[] args)
+    {//Declarando váriaveis do tipo int double e char recebe caracter
+        int totalmercadorias, x = 0;
+        double precocompra = 0, precovenda = 0, lucroa = 0, lucrob = 0;
+        double lucroc = 0, lucrot, totalc, totalv, levantamento = 0;
+        char nomemercadoria;
+        //Dando entrada de dados por usúario 
+        Console.WriteLine("Quantas mercadorias voce quer calcular: ");
+        totalmercadorias = int.Parse(Console.ReadLine());
+        Console.WriteLine("Insira o nome da mercadoria: ");
+        nomemercadoria = char.Parse(Console.ReadLine());
+        Console.WriteLine("Qual o preco de compra: ");
+        precocompra = double.Parse(Console.ReadLine());
+        Console.WriteLine("Qual o preco de venda: ");
+        precovenda = double.Parse(Console.ReadLine());
+        //Inicializando com while 
+        while (x < totalmercadorias)
+        {//dando condição ao sistema 
+            if (precovenda > precocompra)
+            {
+                levantamento = (((precovenda / precocompra) - 1) * 100);
+            }
+            if (levantamento <= 100)
+            {
+                lucroa++;
+            }
+            else if (levantamento > 10 && levantamento <= 20)
+            {
+                lucrob++;
+            }
+            else if (levantamento > 20)
+            {
+                lucroc++;
+            }
+            x++;
+        }//fazendo calculo dos valores 
+        lucrot = precovenda - precocompra;
+        totalc = precocompra;
+        totalv = precovenda;
+        //Imprimindo na tela 
+        Console.WriteLine("O total de mercadorias que apresentam 10%% de lucro e:{0}", lucroa);
+        Console.WriteLine("O total de mercadorias que apresentam entre 10%% e 20%% de lucro é: {0}", lucrob);
+        Console.WriteLine("O total de mercadorias que apresentam mais que 20%% de lucro é: {0}", lucroc);
+        Console.WriteLine("O lucro total e:{0}", lucrot);
+        Console.WriteLine("O total de vendas e:{0}", totalv);
+        Console.WriteLine("O total de compras e: {0}", totalc);
+        Console.WriteLine("Fim");
+    }
+}
