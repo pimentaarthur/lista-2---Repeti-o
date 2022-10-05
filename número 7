@@ -1,0 +1,31 @@
+using System;
+
+    namespace num1{
+
+        class num1{
+
+
+           static void Main(string[] args){
+               
+                int Fibonacci;
+                int x=1, y=0, z=0;
+
+
+                Console.WriteLine("informe o número desejado da seguencia de Fibonacci");
+                Fibonacci = int.Parse(Console.ReadLine());
+
+                for (int i = 0; i < Fibonacci; i++)
+                {
+                z = x + y;
+                Console.WriteLine(z);
+                y = x;
+                x = z;
+                }
+                
+                Console.ReadLine();
+              
+                }   
+    } 
+  }
+                
+                
